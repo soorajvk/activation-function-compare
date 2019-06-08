@@ -1,2 +1,1 @@
-# activation-function-compare
-Comparing various activation functions in neural networks 
+# Comparison of Various Activation Functions in Artificial Neural Network 
