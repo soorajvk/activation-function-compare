@@ -67,5 +67,5 @@ Leaky ReLU is a variant of ReLU which overcomes the dying ReLU problem. The diff
 
 
 # Reference
-[1] Nerual Networks Basics: http://www.big-data.tips/neural-network
+[1] Neural Networks Basics: http://www.big-data.tips/neural-network
 [2] Comparison of activation functions: https://towardsdatascience.com/comparison-of-activation-functions-for-deep-neural-networks-706ac4284c8a
