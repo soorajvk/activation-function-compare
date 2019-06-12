@@ -60,6 +60,39 @@ Leaky ReLU is a variant of ReLU which overcomes the dying ReLU problem. The diff
 
 
 
+### Set Up
+To ensure that the machine running the ipython notebooks are set up correctly, follow these steps pior to running the codes:
+* Install python3 and pip
+
+```
+sudo apt-get install python3-pip
+```
+* Install git, to pull this repository
+
+```
+sudo apt-get install git
+```
+* Pull the github repository
+
+```
+git clone https://github.com/soorajvk/activation-function-comparison.git
+```
+* Navigate into the folder and run the requirements.txt
+```
+cd activation-function-comparison
+pip install -r requirements.txt
+```
+* After the installations are over, run jupyter notebook and replace `<filename>` with the filename of the notebook
+```
+jupyter notebook <filename>.ipynb
+```
+### Conclusion
+After runnning the test scenario for all four activation functions the following were observed:
+
+
+
+
+
 
 
 
