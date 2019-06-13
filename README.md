@@ -87,13 +87,24 @@ pip install -r requirements.txt
 jupyter notebook <filename>.ipynb
 ```
 ### Conclusion
-After runnning the test scenario for all four activation functions the following were observed:
+The conclusions listed here were drawn from running the test scenario defined in the notebooks in this repository. The test scenarios were build using tensorflow backend and keras higher level APIs. 
+
+* Sigmoid
+![Image of sigmoid output](/Images/sigmoid-output.PNG)
+Using sigmoid was found to have the lowest accuracy after training at around 70%. This is would have been worse if the predicted output during training was highly skewed to left or right where the gradient is close to zero. Therefore, sigmoid generally has a slow learning rate (not the hyperparameter) and is generally never used.
+
+* tanh
+![Image of tanh output](/Images/tanh-output.PNG)
+Using tanh out performed the sigmoid function by a big margin with an accuracy of 87.4%. This is due to the fact that tanh has a larger gradient in the centre as compared to sigmoid. This would have still have the same drawback as the sigmoid when it comes to have a highly skewed predicted output during training.
+
+* ReLU
+![Image of tanh output](/Images/ReLU-output.PNG)
+Using ReLU during training exhibited the highest learning by acheiving an accuracy of 94%. One of the main reason for using ReLU is because of this fast learning during training and it is less computationally heavy as sigmoid and tanh. ReLU still would be used in the output layer and still consists a certain amount of linearity.
 
 
-
-
-
-
+* Leaky ReLU
+![Image of leaky relu output](/Images/leakyrelu-output.PNG)
+Using Leaky ReLU during training produced similary levels  of accuracy (~93%) during training. Leaky ReLU is expected to show similar characteristics when the predicted output generated is positive but such factors are not possible to control during real world application. Therefore, using Leaky ReLU will help full ultilise the benefit of ReLU and minimizing its drawbacks.
 
 
 
