@@ -14,7 +14,7 @@ A node or neuron is the most basic building block of a neural network, it takes 
 >Image source: http://www.big-data.tips/neural-network
 
 ## Why are activation functions important and why do we need them?
-Activation functions are used to introduce nonlinearity to artificial neural network which is required to tackle complex real world applications. For example, if we want our neural network to be able to identify objects in an image or video, translate text or speech from one language to another, etc. our
+Activation functions are used to introduce nonlinearity to the artificial neural network which is required to tackle complex real-world applications. For example, if we want our neural network to be able to identify objects in an image or video, translate text or speech from one language to another, etc. our
 neural network should be able to learn non-linear states. 
 
 ## What are the different kinds of activation functions?
@@ -29,7 +29,7 @@ In this project, we are going to compare four of the most popular activation fun
 
 
 
-The sigmoid function was one of the most frequently used activation functions. The sigmoid activation function can be used a good classifier because for a small x there will be a large y. This means faster gradient descent. The biggest problem with this function is towards the ends of the function y does not react much with respect to a change in x. The derivative values in these regions are very small and converges to 0. This is called vanishing gradient. The means that the learning is going to be very slow these regions. Regardless, sigmoid is still used in the output layer while performing binary classifications.
+The sigmoid function was one of the most frequently used activation functions. The sigmoid activation function can be used a good classifier because for a small x there will be a large y. This means faster gradient descent. The biggest problem with this function is towards the ends of the function y does not react much with respect to a change in x. The derivative values in these regions are very small and converge to 0. This is called vanishing gradient. The means that the learning is going to be very slow these regions. Regardless, sigmoid is still used in the output layer while performing binary classifications.
 
 In recent year there have been many other better alternatives that have been discovered such as tanH, ReLU and Leaky ReLU. 
 
@@ -61,7 +61,7 @@ Leaky ReLU is a variant of ReLU which overcomes the dying ReLU problem. The diff
 
 
 ### Set Up
-To ensure that the machine running the ipython notebooks are set up correctly, follow these steps pior to running the codes:
+To ensure that the machine running the ipython notebooks are set up correctly, follow these steps prior to running the codes:
 * Install python3 and pip
 
 ```
@@ -72,7 +72,7 @@ sudo apt-get install python3-pip
 ```
 sudo apt-get install git
 ```
-* Pull the github repository
+* Pull the GitHub repository
 
 ```
 git clone https://github.com/soorajvk/activation-function-comparison.git
@@ -89,22 +89,30 @@ jupyter notebook <filename>.ipynb
 ### Conclusion
 The conclusions listed here were drawn from running the test scenario defined in the notebooks in this repository. The test scenarios were build using tensorflow backend and keras higher level APIs. 
 
-* Sigmoid
-![Image of sigmoid output](/Images/sigmoid-output.PNG)
+#### Sigmoid
+
+![Image of sigmoid output](/Images/sigmoid-output.png)
+
 Using sigmoid was found to have the lowest accuracy after training at around 70%. This is would have been worse if the predicted output during training was highly skewed to left or right where the gradient is close to zero. Therefore, sigmoid generally has a slow learning rate (not the hyperparameter) and is generally never used.
 
-* tanh
-![Image of tanh output](/Images/tanh-output.PNG)
-Using tanh out performed the sigmoid function by a big margin with an accuracy of 87.4%. This is due to the fact that tanh has a larger gradient in the centre as compared to sigmoid. This would have still have the same drawback as the sigmoid when it comes to have a highly skewed predicted output during training.
+#### tanh
 
-* ReLU
-![Image of tanh output](/Images/ReLU-output.PNG)
-Using ReLU during training exhibited the highest learning by acheiving an accuracy of 94%. One of the main reason for using ReLU is because of this fast learning during training and it is less computationally heavy as sigmoid and tanh. ReLU still would be used in the output layer and still consists a certain amount of linearity.
+![Image of tanh output](/Images/tanh-output.png)
+
+Using tanh outperformed the sigmoid function by a big margin with an accuracy of 87.4%. This is due to the fact that tanh has a larger gradient in the centre as compared to sigmoid. This would have still had the same drawback as the sigmoid when it comes to having a highly skewed predicted output during training.
+
+#### ReLU
+
+![Image of tanh output](/Images/ReLU-output.png)
+
+Using ReLU during training exhibited the highest learning by achieving an accuracy of 94%. One of the main reason for using ReLU is because of this fast learning during training and it is less computationally heavy as sigmoid and tanh. ReLU still would be used in the output layer and still consists of a certain amount of linearity.
 
 
-* Leaky ReLU
-![Image of leaky relu output](/Images/leakyrelu-output.PNG)
-Using Leaky ReLU during training produced similary levels  of accuracy (~93%) during training. Leaky ReLU is expected to show similar characteristics when the predicted output generated is positive but such factors are not possible to control during real world application. Therefore, using Leaky ReLU will help full ultilise the benefit of ReLU and minimizing its drawbacks.
+#### Leaky ReLU
+
+![Image of leaky relu output](/Images/leakyrelu-output.png)
+
+Using Leaky ReLU during training produced similar levels of accuracy (~93%) during training. Leaky ReLU is expected to show similar characteristics when the predicted output generated is positive but such factors are not possible to control during real-world application. Therefore, using Leaky ReLU will help full utilise the benefit of ReLU and minimizing its drawbacks.
 
 
 
